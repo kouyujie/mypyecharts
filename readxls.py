@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import xlrd
-xlsfile = r".\1.xlsx"# 打开指定路径中的xls文件
+xlsfile = r"1.xlsx"# 打开指定路径中的xls文件
 book = xlrd.open_workbook(xlsfile)#得到Excel文件的book对象，实例化对象
 sheet0 = book.sheet_by_index(0) # 通过sheet索引获得sheet对象
 print "1、",sheet0
