@@ -1,15 +1,33 @@
 <!DOCTYPE html>  
 <html>  
-  
+
 <head>  
     <meta charset="utf-8">  
     <title>{{mytitle}}</title>  
     {% for jsfile_name in script_list %}  
     <script src="{{host}}/{{jsfile_name}}.js"></script>  
-    {% endfor %}  
+    {% endfor %}
+<script type="text/javascript">
+function countDown(secs,surl){
+ var jumpTo = document.getElementById('jumpTo');
+ jumpTo.innerHTML=secs;
+ if(--secs>0){
+     setTimeout("countDown("+secs+",'"+surl+"')",1000);
+     }
+ else{
+     location.href=surl;
+     -ma
+     }
+ }
+</script>
 </head>  
-  
-<body>  
+
+<body>
+<span id="jumpTo">3</span>秒后自动跳转
+<script type="text/javascript">
+    //countDown(5,'http://192.168.1.208:5018/one');
+    countDown(5,'http://192.168.1.208:5018/one');
+</script>
   {{myechart|safe}}  
 </body>  
   
