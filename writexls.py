@@ -12,7 +12,6 @@ encoding:设置字符编码，一般要这样设置：w = Workbook(encoding='utf
 style_compression:表示是否压缩，不常用。
 '''
 #创建一个sheet对象，一个sheet对象对应Excel文件中的一张表格。
-# 在电脑桌面右键新建一个Excel文件，其中就包含sheet1，sheet2，sheet3三张表
 sheet = book.add_sheet('test', cell_overwrite_ok=True)
 # 其中的test是这张表的名字,cell_overwrite_ok，表示是否可以覆盖单元格，其实是Worksheet实例化的一个参数，默认值是False
 # 向表test中添加数据
